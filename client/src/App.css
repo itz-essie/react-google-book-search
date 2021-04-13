@@ -43,15 +43,3 @@ body {
   font-weight: bolder;
   text-align: center;
 }
-
-.searchBtn {
-  margin-top: 10px;
-}
-
-.searchBar {
-  color: white;
-  background-color: black;
-  padding: 2vw;
-  margin: 2vw;
-  font-size: 20px;
-}
