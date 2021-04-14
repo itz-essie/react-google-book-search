@@ -38,7 +38,7 @@ function BookResults(props) {
                 <button
                   className="btn saveBtn"
                   onClick={() =>
-                    props.handleSave({
+                    this.handleSave({
                       title: book.volumeInfo.title,
                       authors: book.volumeInfo.authors.join(", "),
                       description: book.volumeInfo.description,
