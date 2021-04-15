@@ -15,6 +15,11 @@ function BookResults(props) {
   const handleTyping = (e) => {
     setSearch(e.target.value);
   };
+
+  const handleSave = (bookInfo) => {
+console.log(bookInfo)
+bookSearch.addBook(bookInfo)
+  }
   return (
     <div>
       <Searchbar handleSubmit={handleSubmit} handleTyping={handleTyping} />
@@ -38,7 +43,7 @@ function BookResults(props) {
                 <button
                   className="btn saveBtn"
                   onClick={() =>
-                    this.handleSave({
+                    handleSave({
                       title: book.volumeInfo.title,
                       authors: book.volumeInfo.authors.join(", "),
                       description: book.volumeInfo.description,

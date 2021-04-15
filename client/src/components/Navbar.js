@@ -13,10 +13,10 @@ function Navbar() {
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="/">Search</a>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <a className="nav-link" href="/saved">Saved</a>
         </li>
-      </ul>
+      </ul>x  
     </div>
   </div>
 </nav>

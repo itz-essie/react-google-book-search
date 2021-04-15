@@ -1,7 +1,7 @@
 {
-  "name": "react-google-book-search",
+  "name": "react-google-books",
   "version": "1.0.0",
-  "description": "Google book search with React",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -19,10 +19,9 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "axios": "^0.18.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "mongodb": "^3.6.6",
-    "mongoose": "^5.12.3"
+    "mongoose": "^5.3.16"
   }
 }

@@ -6,6 +6,7 @@ import Header from "./components/Header.js";
 import Navbar from "./components/Navbar.js"
 
 function App() {
+  console.log("YOU HIT IT!")
   return (
     
   <Router>
@@ -14,7 +15,7 @@ function App() {
       <Header/>
       <Switch>
         <Route exact path= {["/", "/search"]} component={Search} />
-        <Route exact path= "/saved" componenet={Saved} />
+        <Route exact path= "/saved" component={Saved} />
       </Switch>
     </div>
   </Router>
