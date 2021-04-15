@@ -5,7 +5,14 @@ import "../components/style.css"
 
 function Saved() {
   const [books, setBooks] = useState(null);
-  // const [gotBooks, setGotBooks] = useState(false)
+  const retrieve = function () {
+    bookSearch.getBooks().then(function(results) {
+      setBooks(
+        results.data
+    )
+  })
+  }
+
   useEffect(() =>{
     if(!books){
       viewSavedBooks()
@@ -18,8 +25,13 @@ function Saved() {
       // setGotBooks(true)
     });
   };
-  const handleDelete = () =>{
-
+  const handleDelete = (id) =>{
+    bookSearch.deleteBook(id).then(function (results){
+      retrieve();
+    })
+      console.log("delete btn")
+  
+    
   }
   return (
     <div>
@@ -27,31 +39,21 @@ function Saved() {
       books ?
     books.map(book => {
       return (
-        <div className="bookResult" key={book.volumeInfo.id}>
+        <div className="bookResult" key={book.id}>
             <div className="row">
               <div className="col-md-9">
-                <p className="title">{book.volumeInfo.title}</p>
-                <p className="author">{book.volumeInfo.authors}</p>
+                <p className="title">{book.title}</p>
+                <p className="author">{book.authors}</p>
               </div>
 
               <br />
 
               <div className="col-md-3">
-                <a href={book.saleInfo.buyLink}>
-                  <button className="btn viewBtn">
-                    <span className="btnSpan">View</span>
-                  </button>
-                </a>
                 <button
                   className="btn saveBtn"
                   onClick={() =>
-                    handleDelete({
-                      title: book.volumeInfo.title,
-                      authors: book.volumeInfo.authors.join(", "),
-                      description: book.volumeInfo.description,
-                      image: book.volumeInfo.imageLinks.thumbnail,
-                      link: book.saleInfo.buyLink,
-                    })
+                    handleDelete(
+                      book._id)
                   }
                 >
                   <span className="btnSpan">Delete</span>
@@ -61,12 +63,12 @@ function Saved() {
             <div className="row">
               <div className="col-md-3">
                 <img
-                  src={book.volumeInfo.imageLinks.thumbnail}
+                  src={book.image}
                   alt={book.title}
                 />
               </div>
               <div className="col-md-9">
-                <p className="plot">{book.volumeInfo.description}</p>
+                <p className="plot">{book.description}</p>
               </div>
             </div>
             <br />
