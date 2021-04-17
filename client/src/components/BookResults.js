@@ -34,7 +34,8 @@ function BookResults() {
               <br />
 
               <div className="col-md-3">
-                <a href={book.saleInfo.buyLink}>
+                <a href={book.saleInfo.buyLink} target="_blank"
+              rel="noreferrer">
                   <button className="btn viewBtn">
                     <span className="btnSpan">View</span>
                   </button>

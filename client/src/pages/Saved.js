@@ -49,6 +49,12 @@ function Saved() {
               <br />
 
               <div className="col-md-3">
+                  <a href={book.saleInfo} target="_blank"
+              rel="noreferrer">
+                  <button className="btn viewBtn">
+                    <span className="btnSpan">View</span>
+                  </button>
+                </a>
                 <button
                   className="btn saveBtn"
                   onClick={() =>
