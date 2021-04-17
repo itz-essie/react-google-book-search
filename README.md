@@ -56,8 +56,9 @@ To run test, run the following commands:
 npm start
 ```
 ## Links
-**[Deployed on Heroku](https://lit-chamber-01164.herokuapp.com/)**
-**[Repo](https://github.com/itz-essie/react-google-book-search)**
+- **[Deployed on Heroku](https://lit-chamber-01164.herokuapp.com/)**
+
+- **[Repo](https://github.com/itz-essie/react-google-book-search)**
 
 ## Screenshot
 ![Secreenshot of App](/client/src/images/booksearch.png)
