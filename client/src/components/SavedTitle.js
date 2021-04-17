@@ -8,8 +8,7 @@ function SavedTitle() {
         <div className="container">
           <h1 className="display-4">Google Book Search</h1>
           <p className="lead">
-            Here is a list of your saved books. Click on "view" for additional
-            details, or "delete", to remove from your list of favorites.
+            Here is a list of your saved books. Click on "delete" to remove from your list of favorites.
           </p>
         </div>
       </div>

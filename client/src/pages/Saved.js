@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import bookSearch from "../utils/API"
 import "../components/style.css"
+import SavedTitle from "../components/SavedTitle.js"
 
 
 function Saved() {
@@ -20,21 +21,20 @@ function Saved() {
   },[books])
   const viewSavedBooks = () => {
     bookSearch.getBooks().then((results) => {
-      console.log(results)
       setBooks(results.data);
       // setGotBooks(true)
     });
   };
   const handleDelete = (id) =>{
-    bookSearch.deleteBook(id).then(function (results){
+    bookSearch.deleteBook(id).then(function (){
       retrieve();
     })
-      console.log("delete btn")
   
     
   }
   return (
     <div>
+      <SavedTitle/>
     {
       books ?
     books.map(book => {

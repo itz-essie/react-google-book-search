@@ -3,7 +3,7 @@ import Searchbar from "./Searchbar";
 import bookSearch from "../utils/API";
 import "./style.css";
 
-function BookResults(props) {
+function BookResults() {
   const [search, setSearch] = useState("");
   const [books, setBooks] = useState([]);
 
@@ -17,9 +17,8 @@ function BookResults(props) {
   };
 
   const handleSave = (bookInfo) => {
-console.log(bookInfo)
-bookSearch.addBook(bookInfo)
-  }
+    bookSearch.addBook(bookInfo);
+  };
   return (
     <div>
       <Searchbar handleSubmit={handleSubmit} handleTyping={handleTyping} />
